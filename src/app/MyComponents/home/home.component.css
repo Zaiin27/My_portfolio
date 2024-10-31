@@ -1,0 +1,131 @@
+body {
+    margin: 0; /* Remove default margin */
+}
+
+.home {
+    height: 100vh;
+    background-color: #000; /* Full black background */
+    color: #fff;
+    display: flex;
+    justify-content: space-evenly; /* Space between text and image */
+    align-items: center;
+    padding: 20px;
+    font-family: 'Poppins', sans-serif; /* Use the same font for consistency */
+}
+
+.content {
+    max-width: 600px; /* Limit width for better readability */
+    text-align: left; /* Align text to the left */
+    padding: 20px; /* Add padding for spacing */
+    opacity: 0; /* Start invisible */
+    animation: fadeIn 1s forwards; /* Fade in animation */
+}
+
+.content h1 {
+    font-size: 30px; /* Adjusted heading size */
+    margin-bottom: 15px; /* Increase margin for spacing */
+    text-transform: uppercase; /* Make the heading uppercase */
+    letter-spacing: 2px; /* Space out letters for effect */
+    color: #f39c12;
+    font-weight: bold;
+}
+.iam{
+    color: #c98989;
+    font-weight: bold;
+    font-size: 1.5rem;
+    margin-left: 0.5rem;
+}
+
+.content p {
+    font-size: 15px; /* Adjusted paragraph size */
+    margin: 10px 0; /* Maintain spacing */
+    width: 26rem;
+    transition: transform 0.3s; /* Smooth scaling */
+}
+
+.content p:hover {
+    transform: scale(1.05); 
+}
+
+/* Base button styles */
+.btn {
+    /* f39c12 */
+    background-color: transparent; /* Use a vibrant button color */
+    color: #fff;
+    padding: 8px 10px; /* Smaller padding for a smaller button */
+    border: 2px solid #f39c12;
+    border-radius: 10px; /* Rounded corners for the button */
+    cursor: pointer;
+    font-size: 14px; /* Slightly smaller font size */
+    transition: transform 0.3s, background-color 0.3s, box-shadow 0.3s;
+}
+
+/* Button hover animations */
+.btn:hover {
+    background-color: #f39c12; /* Change color on hover */
+    transform: scale(1.1) rotate(5deg); /* Scale and rotate effect on hover */
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3); /* Add shadow on hover */
+    border: #000;
+}
+
+/* New button styles */
+.btn-secondary {
+    background-color: #2980b9; /* Different color for secondary buttons */
+    margin-left: 10px; /* Space between buttons */
+}
+
+.btn-secondary:hover {
+    background-color: #3498db; /* Change color on hover */
+    transform: scale(1.1) rotate(-5deg); /* Scale and rotate effect on hover */
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3); /* Add shadow on hover */
+}
+
+/* Hero image styles */
+.hero-image {
+    width: 350px; /* Adjusted width */
+    animation: bounce 3s infinite; /* Slowed down bounce animation */
+    /* border-radius: 50%; */
+    border-radius:1rem;
+    border: 3px solid #f39c12;
+}
+
+/* Bounce animation */
+@keyframes bounce {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-15px); /* Adjusted bounce height */
+    }
+}
+
+/* Fade-in animation for content */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px); /* Slightly move up during fade-in */
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+    .home {
+        flex-direction: column; /* Stack content vertically */
+        align-items: center; /* Center align items */
+    }
+
+    .content {
+        text-align: center; /* Center text on smaller screens */
+        max-width: 100%; /* Full width on mobile */
+        padding: 0; /* Remove padding */
+    }
+
+    .hero-image {
+        width: 250px; /* Smaller size on mobile */
+        margin-top: 20px; /* Space between content and image */
+    }
+}

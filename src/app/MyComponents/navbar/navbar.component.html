@@ -1,0 +1,19 @@
+<header [ngClass]="{'scrolled': scrolled}">
+    <div class="logo">My Portfolio</div>
+    <nav>
+        <div class="hamburger" (click)="toggleMenu()">
+            <div class="bar"></div>
+            <div class="bar"></div>
+            <div class="bar"></div>
+        </div>
+        <ul [ngClass]="{'active': isMenuOpen}">
+            <li><a routerLink="/home">Home</a></li>
+            <li><a routerLink="/about">About</a></li>
+            <li><a routerLink="/projects">Projects</a></li>
+            <li><a routerLink="/contact">Contact</a></li>
+        </ul>
+        <div class="profile">
+            <img src="https://images.pexels.com/photos/771742/pexels-photo-771742.jpeg" alt="Profile Icon">
+        </div>
+    </nav>
+</header>
